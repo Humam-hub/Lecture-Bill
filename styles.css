@@ -1,0 +1,26 @@
+#theoryTable, #practicalTable {
+    width: 100%; 
+}
+
+#theoryTable td {
+    border: 1px solid;
+    height: 62px;
+    max-height: 62px;
+}
+
+#practicalTable td {
+    border: 1px solid;
+    height: 62px;
+    max-height: 62px;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+
+
+#cap:hover {
+    cursor: pointer;
+    color: greenyellow;
+}

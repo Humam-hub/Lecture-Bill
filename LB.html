@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lecture Bill Automation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Department of Computer Science, University of Agriculture, Faisalabad</h1>
+  <h2>Lecture Bill Automation</h2> <br>
+  <form>
+    <table style="width:100%">
+      <colgroup>
+        <col style="width:12%">
+        <col style="width:13%">
+        <col style="width:15%">
+        <col style="width:15%">
+      </colgroup>
+      <tr>
+        <td><label for="teacher_name">Name of Teacher:</label></td>
+        <td><input type="text" id="teacher_name" name="teacher_name"></td>
+        <td><label for="designation">Designation:</label></td>
+        <td><input type="text" id="designation" name="designation"></td>
+        <td><label for="credit_hours">Credit Hours:</label></td>
+        <td><input type="text" id="credit_hours" name="credit_hours"></td>
+        <td><label for="total_students">Total Students:</label></td>
+        <td><input type="text" id="total_students" name="total_students"></td>
+      </tr>
+      <tr>
+        <td><label for="course_code">Course Code:</label></td>
+        <td><input type="text" id="course_code" name="course_code"></td>
+        <td><label for="course_title">Course Title:</label></td>
+        <td><input type="text" id="course_title" name="course_title"></td>
+        <td><label for="semester_section">Semester and Section:</label></td>
+        <td><input type="text" id="semester_section" name="semester_section"></td>
+        <td><label for="degree">Degree:</label></td>
+        <td><input type="text" id="degree" name="degree"></td>
+      </tr>
+      <tr>
+        <td><label for="semester">Semester:</label></td>
+        <td>
+          <select id="semester" name="semester">
+            <option value="Spring">Spring</option>
+            <option value="Winter">Winter</option>
+          </select>
+        </td>
+        <td><label for="theoryDay">Theory Day:</label></td>
+        <td>
+          <select id="theoryDay" name="theory">
+            <option value="1">Monday</option>
+            <option value="2">Tuesday</option>
+            <option value="3">Wednesday</option>
+            <option value="4">Thursday</option>
+            <option value="5">Friday</option>
+          </select>
+        </td>
+        <td><label for="practicalDay">Practical Day:</label></td>
+        <td>
+          <select id="practicalDay" name="practical">
+            <option value="1">Monday</option>
+            <option value="2">Tuesday</option>
+            <option value="3">Wednesday</option>
+            <option value="4">Thursday</option>
+            <option value="5">Friday</option>
+          </select>
+        </td>
+        <td><label for="startDate">Semester Start Date:</label></td>
+        <td><input type="date" id="startDate" name="date"></td>
+      </tr>
+      <tr>
+        <td><label for="endDate">Semester End Date:</label></td>
+        <td><input type="date" id="endDate" name="date"></td>
+        <td><label for="theory_lec_freq">Theory Lectures:</label></td>
+        <td>
+          <select id="theory_lec_freq" name="theory_lec">
+            <option value="1 Lecture">1 Lecture</option>
+            <option value="2 Lectures">2 Lectures</option>
+          </select>
+        </td>
+        <td><label for="practical_lec_freq">Practical Lectures:</label></td>
+        <td> 
+          <select id="practical_lec_freq" name="practical_lec">
+            <option value="1 Lecture">1 Lecture</option>
+            <option value="2 Lectures">2 Lectures</option>
+          </select>
+        </td>
+        <td><input type="button" value="Generate Schedule" onclick="populateLectures();populateLectures2()"></td>
+        <td></td>
+      </tr>
+    </table>
+  </form>
+  <table id="theoryTable">
+    <caption><span id="cap" onclick="populateLectures()">Theory</span></caption>
+    <tr id="theorylectureRow">
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr id="theorysigRow">
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+  <br>
+  <table id="practicalTable">
+    <caption><span id="cap" onclick="populateLectures2()">Practical</span></caption>
+    <tr id="practicallectureRow">
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr id="practicalsigRow">
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+  <h3>Summary</h3> <br>
+</body>
+</html>
+<script src="main.js"></script>
+
